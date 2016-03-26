@@ -17,7 +17,7 @@ ENV PATH $PATH:$CATALINA_HOME/bin
 
 ### volumes
 ## tomcat conf
-VOLUME ["/opt/tomcat/conf/tomcat-users.xml"]
+#VOLUME ["/opt/tomcat/conf/tomcat-users.xml"]
 
 CMD $CATALINA_HOME/bin/catalina.sh run
 
