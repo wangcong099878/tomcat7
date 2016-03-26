@@ -11,7 +11,9 @@ $ cd webapps ; wget https://tomcat.apache.org/tomcat-6.0-doc/appdev/sample/sampl
 
 $ sudo docker build -t kmcnally26/tomcat7 .
 
-$ sudo docker run -d -p 8080 --name website3 -v $PWD/webapps:/opt/tomcat/webapps kmcnally26/tomcat7
+$ sudo docker run -d -p 8080 --name website3 -v $PWD/webapps:/opt/tomcat/webapps registry.aliyuncs.com/wangcong/tomcat7
+
+$ sudo docker run -d -p 8080:8080 --name website registry.aliyuncs.com/wangcong/tomcat7
 
 $ sudo docker ps
 CONTAINER ID        IMAGE               COMMAND                  PORTS                     NAMES

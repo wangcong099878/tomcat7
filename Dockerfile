@@ -1,5 +1,5 @@
 FROM centos:centos6
-MAINTAINER Kevin McNally "kevin.mcnally@lastminute.com"
+MAINTAINER cason "251957448@qq.com"
 ENV REFRESHED_AT 2015-12-02-15:02
 
 RUN yum -y install wget tar java-1.7.0-openjdk
@@ -15,5 +15,10 @@ RUN rm -rf /opt/tomcat/webapps/examples /opt/tomcat/webapps/docs
 ENV CATALINA_HOME /opt/tomcat
 ENV PATH $PATH:$CATALINA_HOME/bin
 
-EXPOSE 8080
+### volumes
+## tomcat conf
+VOLUME ["/opt/tomcat/conf/tomcat-users.xml"]
+
 CMD $CATALINA_HOME/bin/catalina.sh run
+
+EXPOSE 8080
